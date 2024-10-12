@@ -1,6 +1,6 @@
 # Goal Reducer with Loop Removal
 
-> Code for *Goal Reduction with Loop-Removal Accelerates RL and Models Human Brain Activity in Goal-Directed Learning (NeurIPS 2024 Spotlight)*
+This repo contains code for *[Goal Reduction with Loop-Removal Accelerates RL and Models Human Brain Activity in Goal-Directed Learning (NeurIPS 2024 spotlight poster)](https://neurips.cc/virtual/2024/poster/94732)*
 
 
 ## Prerequisites
