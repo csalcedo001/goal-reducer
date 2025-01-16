@@ -2,22 +2,9 @@
 
 This repo contains code for *[Goal Reduction with Loop-Removal Accelerates RL and Models Human Brain Activity in Goal-Directed Learning (NeurIPS 2024 spotlight poster)](https://neurips.cc/virtual/2024/poster/94732)*
 
+## Installation
 
-## Prerequisites
-
-We used Python 3.10 and CUDA 12.0.
-
-To run this project, you'll need to install dependencies with 
-
-```bash
-pip install -r requirements.txt
-```
-
-You may also need to compile a cython extension to get faster replay buffer sampling efficiency:
-
-```bash
-. compile.sh
-```
+Check `installation.md` for detailed installation instructions.
 
 ## Quickstart
 
