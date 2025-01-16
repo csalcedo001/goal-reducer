@@ -67,7 +67,7 @@ def create_golsa_DQL_policy(env, log_path, subgoal_on: bool, subgoal_planning: b
                         subgoal_on,
                         subgoal_planning,
                         sampling_strategy,
-                        max_steps=env.max_steps,
+                        max_steps=env.unwrapped.max_steps,
                         discount_factor=gamma,
                         d_kl_c=d_kl_c,
                         estimation_step=1, target_update_freq=target_update_freq,
@@ -337,7 +337,7 @@ def train_model(env_name, policy_name: str, max_steps, agent_view_size, training
         batch_size=batch_size,
         train_fn=lambda epoch, env_step: policy.set_eps(0.1),
         test_fn=after_train,
-        stop_fn=lambda mean_rewards: mean_rewards >= env.stop_rew,
+        stop_fn=lambda mean_rewards: mean_rewards >= env.unwrapped.stop_rew,
         test_in_train=False,
         logger=logger,
     )
