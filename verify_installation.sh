@@ -20,7 +20,7 @@ step_per_epoch=10
 train_n=1
 test_n=1
 
-python run_gridworld.py \
+WANDB_MODE=disabled python run_gridworld.py \
     --seed 0 \
     train \
     -e $task \
