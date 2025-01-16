@@ -13,13 +13,13 @@ conda activate goal-reducer
 
 ### venv
 
-First, ensure you have Python 3.10 installed (check your version with `python --version`). Then, create the virtual environment with
+First, ensure you have Python 3.10 installed (check your version with `python --version`). Create the virtual environment with
 
 ```bash
 python3.10 -m venv .venv
 ```
 
-Activate your Python environment according to your operating system.
+Then, activate your Python environment according to your operating system.
 
 * Linux/Mac
 
@@ -45,9 +45,23 @@ pip install -r requirements.txt
 __Note__: If you happen to find a missing or broken dependency, please update  `requirements.txt` to make it work.
 
 
-## Weights and Biases
+
+### (Check if required) c_utils.c
+
+There is one additional dependency generated with [Cython](https://cython.org/), a framework to create C extensions for Python. There is a script named `c_utils.c` that we use to import functions from some of the Python scripts. In case there is an error related to that file, you can regenerate by running
+
+```bash
+. compile.sh
+```
+
+which essentially called the command `cythonize` on script `c_utils.pyx` to generate the C file.
+
+
+## (Optional) Weights and Biases (W&B)
 
 By default, the original codebase uses [Weights and Biases](https://wandb.ai/site/) to store performance metrics throughout training. Create an account and setup your local user to be able to log metrics from the project to your online account.
+
+You could as well just skip this step by setting the environment variable `WANDB_MODE=disabled` when running your scripts. This way W&B will just ignore all calls to any functions from the package. We disable W&B on the verification script to simplify installation instructions.
 
 
 ## Verify installation
