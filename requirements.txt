@@ -19,5 +19,3 @@ rsatoolbox
 panda_gym
 gym_miniworld
 cython
-
-# Note: install url_encode in your system
