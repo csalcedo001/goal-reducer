@@ -15,6 +15,10 @@ maxsteps=1                     # max steps per an agent can execute in a single 
 task=tasks.TVMGFR-$shape-RARG-GI # task name
 qh_dim=128                       # qnet hidden dimension
 epochs=1
+step_per_epoch=10
+
+train_n=1
+test_n=1
 
 python run_gridworld.py \
     --seed 0 \
@@ -23,8 +27,11 @@ python run_gridworld.py \
     --policy DQL \
     --agent-view-size $agv \
     --max-steps $maxsteps \
+    --training-num $train_n \
+    --test-num $test_n \
     --extra $extra \
     --epochs $epochs \
+    --step-per-epoch $step_per_epoch \
     --lr $lr \
     --d-kl-c $d_kl_c \
     --batch-size $bs \
