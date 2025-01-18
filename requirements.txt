@@ -1,10 +1,10 @@
 click
 gymnasium
 ipdb
-numpy
+numpy==1.26.4
 tianshou
 torch
-matplotlib
+matplotlib==3.7.0
 minigrid==2.1.1
 pathos
 scipy
